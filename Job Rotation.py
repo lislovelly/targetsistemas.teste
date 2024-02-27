@@ -61,19 +61,14 @@ faturamento = [[
 
 valores_faturamento = [dia["valor"] for dia in faturamento[0]]
 
-
 valores_faturamento_com_faturamento = [valor for valor in valores_faturamento if valor != 0]
-
 
 menor_valor = min(valores_faturamento_com_faturamento)
 maior_valor = max(valores_faturamento_com_faturamento)
 
-
 media_mensal = sum(valores_faturamento_com_faturamento) / len(valores_faturamento_com_faturamento)
 
-
 dias_acima_da_media = sum(1 for valor in valores_faturamento_com_faturamento if valor > media_mensal)
-
 
 print(f"Média mensal: R$ {media_mensal:5.2f}")
 print(f"Menor valor de faturamento: R$ {menor_valor:5.2f}")
@@ -101,7 +96,6 @@ faturamento = {
 
 total_mensal = sum(faturamento.values())
 
-
 percentuais = {estado: (valor / total_mensal) * 100 for estado, valor in faturamento.items()}
 
 print(f"Total mensal: R$ {total_mensal:5.2f}")
@@ -116,5 +110,7 @@ a) Essa string pode ser informada através de qualquer entrada de sua preferênc
 b) Evite usar funções prontas, como, por exemplo, reverse;"""
 
 nome = "Elisangela"
+
 nome_invertido = ''.join([nome[i] for i in range(len(nome) - 1, -1, -1)])
+
 print(nome_invertido)
